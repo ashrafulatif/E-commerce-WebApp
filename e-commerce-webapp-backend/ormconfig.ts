@@ -1,3 +1,4 @@
+import { ProductManagement } from 'src/product-management/entities/product-management.entity';
 import { User } from 'src/user/entities/user.entity';
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 
@@ -9,6 +10,6 @@ export const config: PostgresConnectionOptions = {
   username: 'postgres',
   password: 'admin',
 
-  entities: [User],
+  entities: [User, ProductManagement],
   synchronize: true,
 };

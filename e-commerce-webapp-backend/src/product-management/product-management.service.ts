@@ -60,7 +60,7 @@ export class ProductManagementService {
     };
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} productManagement`;
+  async remove(id: number) {
+    return await this.productRep.delete(id);
   }
 }
