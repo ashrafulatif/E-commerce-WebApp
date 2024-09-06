@@ -6,6 +6,7 @@ import { config } from 'ormconfig';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { ProductManagementModule } from './product-management/product-management.module';
+import { CartManagementModule } from './cart-management/cart-management.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { ProductManagementModule } from './product-management/product-management
     UserModule,
     AuthModule,
     ProductManagementModule,
+    CartManagementModule,
   ],
   controllers: [AppController],
   providers: [AppService],

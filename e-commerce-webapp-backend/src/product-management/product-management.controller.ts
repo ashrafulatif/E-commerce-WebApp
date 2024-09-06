@@ -6,11 +6,14 @@ import {
   Patch,
   Param,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
 import { ProductManagementService } from './product-management.service';
 import { CreateProductManagementDto } from './dto/create-product-management.dto';
 import { UpdateProductManagementDto } from './dto/update-product-management.dto';
+import { JwtGuard } from 'src/auth/jwt-auth.guard';
 
+@UseGuards(JwtGuard)
 @Controller('product-management')
 export class ProductManagementController {
   constructor(
