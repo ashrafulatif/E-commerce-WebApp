@@ -1,8 +1,19 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
-    extend: {},
+/* eslint-disable no-undef */
+export const content = ["./src/**/*.{js,jsx,ts,tsx}"];
+export const theme = {
+  extend: {
+    colors: {
+      customBlue: "#1DA1F2",
+      customGray: "#F5F5F5",
+    },
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+    },
   },
-  plugins: [],
 };
+export const plugins = [
+  require("@tailwindcss/forms"),
+  require("@tailwindcss/typography"),
+  require("@tailwindcss/aspect-ratio"),
+];
+

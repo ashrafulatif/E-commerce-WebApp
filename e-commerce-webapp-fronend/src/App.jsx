@@ -4,6 +4,7 @@ import Signup from "./components/Signup";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
 import { AuthProvider } from "./contexts/AuthContext";
+import "./app.css";
 
 const App = () => {
   return (
